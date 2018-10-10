@@ -1,7 +1,7 @@
 /*
  * Cloud Computing
  * 03/10/2018
- *  This program runs two greeting threads in parallel.
+ * This program runs two greeting threads in parallel.
 */
 package com.ait.wk4;
 
