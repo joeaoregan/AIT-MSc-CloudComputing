@@ -1,22 +1,22 @@
 /**
-   A deposit runnable makes periodic deposits to a bank account.
+   A withdraw runnable makes periodic withdrawals from a bank account.
 */
 package ait.cloud.wk5;
 
-public class DepositRunnable1 implements Runnable
+public class WithdrawRunnable implements Runnable
 {
    private static final int DELAY = 1; 
-   private BankAccount1 account;
+   private BankAccount account;
    private double amount;
    private int count;
 
    /**
-      Constructs a deposit runnable.
-      @param anAccount the account into which to deposit money
-      @param anAmount the amount to deposit in each repetition
+      Constructs a withdraw runnable.
+      @param anAccount the account from which to withdraw money
+      @param anAmount the amount to withdraw in each repetition
       @param aCount the number of repetitions
    */
-   public DepositRunnable1(BankAccount1 anAccount, double anAmount,
+   public WithdrawRunnable(BankAccount anAccount, double anAmount,
          int aCount)
    {
       account = anAccount;
@@ -30,7 +30,7 @@ public class DepositRunnable1 implements Runnable
       {
          for (int i = 1; i <= count; i++)
          {
-            account.deposit(amount);
+            account.withdraw(amount);
             Thread.sleep(DELAY);
          }
       }

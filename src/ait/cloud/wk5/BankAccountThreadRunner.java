@@ -4,20 +4,20 @@
 */
 package ait.cloud.wk5;
 
-public class BankAccountThreadRunner1
+public class BankAccountThreadRunner
 {
    public static void main(String[] args)
    {
-      BankAccount1 account = new BankAccount1();
+      BankAccount account = new BankAccount();
       final double AMOUNT = 100;
       final int REPETITIONS = 100;
       final int THREADS = 100;
 
       for (int i = 1; i <= THREADS; i++)
       {
-         DepositRunnable1 d = new DepositRunnable1(
+         DepositRunnable d = new DepositRunnable(
             account, AMOUNT, REPETITIONS);
-         WithdrawRunnable1 w = new WithdrawRunnable1(
+         WithdrawRunnable w = new WithdrawRunnable(
             account, AMOUNT, REPETITIONS);
          
          Thread dt = new Thread(d);

@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
    A bank account has a balance that can be changed by 
    deposits and withdrawals.
 */
-public class BankAccount1
+public class BankAccount
 {
    private double balance;
    private Lock balanceChangeLock;
@@ -17,7 +17,7 @@ public class BankAccount1
    /**
       Constructs a bank account with a zero balance.
    */
-   public BankAccount1()
+   public BankAccount()
    {
       balance = 0;
       balanceChangeLock = new ReentrantLock();
